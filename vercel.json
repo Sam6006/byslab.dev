@@ -1,5 +1,5 @@
 {
-  "buildCommand": "git submodule update --init --recursive && hugo",
+  "buildCommand": "./.vercel_build.sh",
   "outputDirectory": "public",
   "installCommand": ""
 }
