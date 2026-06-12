@@ -44,7 +44,7 @@ pagination.pagerSize = 10
   appleTouchIcon = "/apple-touch-icon.png"
 
   env = "production"
-  description = "AI Infra 运维实践记录 —— GPU 集群 / LLM 推理部署 / K3s 踩坑手记"
+  description = "Build Your System Lab —— AI Infra 实践记录。GPU 集群 / LLM 推理部署 / K8s 踩坑手记"
   author = "BYS"
   ShowShareButtons = true
   ShowReadingTime = true
@@ -55,8 +55,8 @@ pagination.pagerSize = 10
   comments = false
 
   [params.homeInfoParams]
-    Title = "欢迎来到 BYSLab"
-    Content = "AI Infra 实践记录。从 K3s 集群到 LLM 推理部署，从 3060 单卡到生产级系统，记录每一步踩坑和成长。"
+    Title = "BYSLab —— Build Your System Lab"
+    Content = "AI Infra 实践记录。从 K8s 集群到 LLM 推理部署，从 3060 单卡到生产级系统，记录每一步踩坑和成长。"
 
   [[params.socialIcons]]
     name = "github"

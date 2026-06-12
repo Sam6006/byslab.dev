@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>BYSLab</title><link>https://byslab.dev/</link><description>Recent content on BYSLab</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Fri, 12 Jun 2026 17:34:58 +0800</lastBuildDate><atom:link href="https://byslab.dev/index.xml" rel="self" type="application/rss+xml"/><item><title>Hello, BYSLab</title><link>https://byslab.dev/posts/hello-byslab/</link><pubDate>Fri, 12 Jun 2026 00:00:00 +0000</pubDate><guid>https://byslab.dev/posts/hello-byslab/</guid><description>博客的第一篇文章</description></item><item><title>关于</title><link>https://byslab.dev/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://byslab.dev/about/</guid><description>&lt;h2 id="byslab">BYSLab&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>BYSLab</title><link>https://byslab.dev/</link><description>Recent content on BYSLab</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Fri, 12 Jun 2026 17:34:58 +0800</lastBuildDate><atom:link href="https://byslab.dev/index.xml" rel="self" type="application/rss+xml"/><item><title>Hello, BYSLab</title><link>https://byslab.dev/posts/hello-byslab/</link><pubDate>Fri, 12 Jun 2026 00:00:00 +0000</pubDate><guid>https://byslab.dev/posts/hello-byslab/</guid><description>博客的第一篇文章</description></item><item><title>关于</title><link>https://byslab.dev/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://byslab.dev/about/</guid><description>&lt;h2 id="byslab--build-your-system-lab">BYSLab —— Build Your System Lab&lt;/h2>
+&lt;p>&lt;strong>搭建你自己的系统实验室。&lt;/strong>&lt;/p>
 &lt;p>一个 AI Infra 工程师的学习与成长记录。&lt;/p>
 &lt;h3 id="博客主题">博客主题&lt;/h3>
 &lt;ul>
-&lt;li>&lt;strong>GPU 集群运维&lt;/strong>：K3s 集群管理、GPU Operator、NVIDIA 驱动与容器化&lt;/li>
+&lt;li>&lt;strong>GPU 集群运维&lt;/strong>：K8s 集群管理、GPU Operator、NVIDIA 驱动与容器化&lt;/li>
 &lt;li>&lt;strong>LLM 推理部署&lt;/strong>：vLLM、SGLang 等推理引擎的部署与调优&lt;/li>
 &lt;li>&lt;strong>模型微调&lt;/strong>：LoRA/QLoRA 微调实践、数据集准备、训练监控&lt;/li>
 &lt;li>&lt;strong>生产级系统&lt;/strong>：从单机实验到 K8s 生产环境的完整链路&lt;/li>
