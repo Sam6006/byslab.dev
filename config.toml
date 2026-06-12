@@ -11,6 +11,11 @@ pagination.pagerSize = 10
   page = ["HTML"]
   section = ["HTML", "RSS"]
 
+# Google Analytics 4
+[services]
+  [services.googleAnalytics]
+    ID = "G-THV28BFEFB"
+
 [[menu.main]]
   identifier = "posts"
   name = "文章"
