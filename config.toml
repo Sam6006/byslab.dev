@@ -43,6 +43,7 @@ pagination.pagerSize = 10
 [params]
   [params.label]
     icon = "/images/logo.svg"
+    text = ""
     iconHeight = 36
   favicon = "/favicon.svg"
   appleTouchIcon = "/apple-touch-icon.png"
