@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="400" height="120">
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#818cf8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#22d3ee;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <polygon points="50,10 86,30 86,70 50,90 14,70 14,30" fill="none" stroke="url(#g1)" stroke-width="2.5"/>
+  <polygon points="50,22 74,35 74,55 50,68 26,55 26,35" fill="url(#g1)" opacity="0.2"/>
+  <polygon points="50,22 74,35 74,55 50,68 26,55 26,35" fill="none" stroke="url(#g1)" stroke-width="1.5"/>
+  <circle cx="50" cy="22" r="3" fill="#818cf8"/>
+  <circle cx="74" cy="35" r="3" fill="#818cf8"/>
+  <circle cx="74" cy="55" r="3" fill="#22d3ee"/>
+  <circle cx="50" cy="68" r="3" fill="#22d3ee"/>
+  <circle cx="26" cy="55" r="3" fill="#22d3ee"/>
+  <circle cx="26" cy="35" r="3" fill="#818cf8"/>
+  <circle cx="50" cy="45" r="3" fill="url(#g1)"/>
+  <line x1="50" y1="22" x2="50" y2="45" stroke="#818cf8" stroke-width="1" opacity="0.4"/>
+  <line x1="74" y1="35" x2="50" y2="45" stroke="#818cf8" stroke-width="1" opacity="0.4"/>
+  <line x1="74" y1="55" x2="50" y2="45" stroke="#22d3ee" stroke-width="1" opacity="0.4"/>
+  <line x1="50" y1="68" x2="50" y2="45" stroke="#22d3ee" stroke-width="1" opacity="0.4"/>
+  <line x1="26" y1="55" x2="50" y2="45" stroke="#22d3ee" stroke-width="1" opacity="0.4"/>
+  <line x1="26" y1="35" x2="50" y2="45" stroke="#818cf8" stroke-width="1" opacity="0.4"/>
+  <text x="115" y="50" font-family="system-ui, -apple-system, sans-serif" font-size="38" font-weight="700" fill="#f1f5f9" letter-spacing="2">BYS</text>
+  <text x="115" y="80" font-family="system-ui, -apple-system, sans-serif" font-size="30" font-weight="300" fill="#818cf8" letter-spacing="4">Lab</text>
+  <line x1="108" y1="25" x2="108" y2="82" stroke="#334155" stroke-width="1"/>
+</svg>
