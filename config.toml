@@ -47,6 +47,9 @@ pagination.pagerSize = 10
     iconHeight = 36
   favicon = "/favicon.svg"
   appleTouchIcon = "/apple-touch-icon.png"
+  [params.analytics]
+    [params.analytics.google]
+      SiteVerificationTag = "eH1ZUCC6cNl7d6pWxlx5jUSlGhL9TELAFYtodQHIJXM"
 
   env = "production"
   description = "Build Your System Lab —— AI Infra 实践记录。GPU 集群 / LLM 推理部署 / K8s 踩坑手记"
