@@ -8,3 +8,4 @@ buildDrafts = false
 buildFuture = false
 enableEmoji = true
 pagination.pagerSize = 10
+
