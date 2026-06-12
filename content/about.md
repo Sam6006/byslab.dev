@@ -1,9 +1,6 @@
 ---
 title: "关于"
-slug: "about"
-hidemeta: true
-ShowReadingTime: false
-ShowBreadCrumbs: false
+description: "BYSLab —— Build Your System Lab"
 ---
 
 ## BYSLab —— Build Your System Lab

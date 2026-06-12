@@ -1,0 +1,10 @@
+theme = "blowfish"
+baseURL = "https://byslab.dev/"
+defaultContentLanguage = "zh-cn"
+enableRobotsTXT = true
+summaryLength = 30
+hasCJKLanguage = true
+buildDrafts = false
+buildFuture = false
+enableEmoji = true
+pagination.pagerSize = 10

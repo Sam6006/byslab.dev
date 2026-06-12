@@ -1,0 +1,8 @@
+[goldmark]
+  [goldmark.renderer]
+    unsafe = true
+  [goldmark.extensions]
+    [goldmark.extensions.passthrough]
+      enable = true
+[highlight]
+  noClasses = false
