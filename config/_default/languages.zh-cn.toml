@@ -17,6 +17,6 @@ title = "BYSLab"
   headline = "AI Infra 工程师"
   bio = "做运维出身，正在系统学习 AI Infra。记录从 K8s 集群到 LLM 推理部署的每一步踩坑与成长。"
   links = [
-    { github = "https://github.com/" },
     { email = "mailto:admin@byslab.dev" },
+    { github = "https://github.com/" },
   ]
