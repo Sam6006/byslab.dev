@@ -4,7 +4,7 @@ title = "BYSLab"
 theme = "PaperMod"
 defaultContentLanguage = "zh"
 enableGitInfo = true
-paginate = 10
+pagination.pagerSize = 10
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
