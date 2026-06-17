@@ -44,7 +44,7 @@ fingerprintAlgorithm = "sha512"
   showRelatedContent = false
   showTaxonomies = true
   showWordCount = false
-  sharingLinks = ["twitter", "reddit", "email"]
+  sharingLinks = ["twitter", "linkedin", "telegram", "email"]
 
 [list]
   showHero = false
