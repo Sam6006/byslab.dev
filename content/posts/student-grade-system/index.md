@@ -9,7 +9,7 @@ tags: ["Python", "入门", "实战"]
 
 学了列表、字典、循环和条件判断之后，最好的巩固方式就是做一个完整的程序来串联这些知识。学生成绩管理系统就是一个经典的练手项目。
 
-**本篇用到的知识点**：字典嵌套（`dict` in `dict`）、列表和字典的遍历、流程控制（`if-elif-else`）、循环（`while` / `for`）、以及函数封装（`def`）。
+**本篇用到的知识点**：字典嵌套（`dict` in `dict`）、列表和字典的遍历、流程控制（`if-elif-else`）、循环（`while` / `for`）、内置函数（`sum` / `max` / `min`）。
 
 ---
 
@@ -17,7 +17,7 @@ tags: ["Python", "入门", "实战"]
 
 这个程序要实现的功能：
 
-```
+```text
 1. 添加学生（姓名 + 各科成绩）
 2. 删除学生
 3. 修改成绩
@@ -45,7 +45,7 @@ students = {
 
 ## 主循环与菜单
 
-程序的核心是一个 `while True` 循环，每次显示菜单，等待用户输入：
+程序的核心是一个 `while True` 循环：
 
 ```python
 while True:
@@ -56,14 +56,9 @@ while True:
 
     if choice == "1":
         # 添加学生
-    elif choice == "2":
-        # 删除学生
-    # ...
     elif choice == "0":
         break
 ```
-
-这种"菜单驱动"的结构，几乎所有命令行程序都在用。
 
 ---
 
@@ -74,22 +69,18 @@ while True:
 先检查学生是否已存在，不存在则逐个科目输入成绩：
 
 ```python
-if choice == "1":
-    name = input("请输入学生姓名：")
-    if name in students:
-        print("该学生已存在")
-        continue
+name = input("请输入学生姓名：")
+if name in students:
+    print("该学生已存在")
+    continue
 
-    scores = {}
-    for subject in SUBJECTS:
-        scores[subject] = float(input(f"请输入{subject}成绩："))
-    students[name] = scores
-    print(f"学生{name}添加成功")
+scores = {}
+for subject in SUBJECTS:
+    scores[subject] = float(input(f"请输入{subject}成绩："))
+students[name] = scores
 ```
 
-> 注意：这里用 `SUBJECTS = ["语文", "数学", "英语"]` 作为全局科目列表，方便后续修改。
-
-![添加学生运行结果](image-20260708162509722.png)
+![添加学生运行结果](add.png)
 
 ### 删除学生
 
@@ -101,59 +92,45 @@ else:
     print("未找到该学生")
 ```
 
-`del` 是 Python 内置的删除关键字，可以直接从字典中移除一个键值对。
-
-![删除学生运行结果](image-20260708162347858.png)
+![删除学生运行结果](delete.png)
 
 ### 修改成绩
 
-先确认学生存在，再确认科目存在，最后更新分数：
+先确认学生和科目都存在，再更新分数：
 
 ```python
-if name not in students:
-    print("该学生不存在")
-    continue
-
 print(students[name])
 subject = input("请输入要修改的科目名：")
-if subject not in students[name]:
-    print(f"该学生没有{subject}科目")
-    continue
-
 students[name][subject] = float(input(f"请输入{subject}的新分数："))
 ```
 
-![修改成绩运行结果](D:\byslab.dev\content\posts\student-grade-system\image-20260708161926068.png)
+![修改成绩运行结果](modify.png)
 
 ### 查看所有学生
+
+遍历字典打印所有数据：
 
 ```python
 for name, scores in students.items():
     print(f"{name}: {scores}")
 ```
 
-![查看所有学生运行结果](image-20260708162231909.png)
+![查看所有学生运行结果](view.png)
 
 ### 统计
 
-收集所有成绩后进行统计计算：
+收集所有成绩后计算：
 
 ```python
 all_scores = []
-
 for scores in students.values():
     all_scores.extend(scores.values())
 
 total = sum(all_scores)
-count = len(all_scores)
-avg = total / count
-max_score = max(all_scores)
-min_score = min(all_scores)
-
-print(f"全部成绩统计(共{count}个成绩)")
+avg = total / len(all_scores)
 print(f"平均分: {avg:.2f}")
-print(f"最大分: {max_score:.2f}")
-print(f"最小分: {min_score:.2f}")
+print(f"最大分: {max(all_scores):.2f}")
+print(f"最小分: {min(all_scores):.2f}")
 
 # 各学生平均分
 for name, scores in students.items():
@@ -161,9 +138,9 @@ for name, scores in students.items():
     print(f"学生{name}: 平均分{stu_avg:.2f}")
 ```
 
----
+![统计运行结果](stats.png)
 
-![统计运行结果](image-20260708162150735.png)
+---
 
 ## 完整代码
 
@@ -188,8 +165,7 @@ while True:
     print("0.退出")
 
     choice = input("请选择操作（输入数字：）").strip()
-	
-    #========1、添加学生========="
+
     if choice == "1":
         name = input("请输入学生姓名：")
         if name in students:
@@ -200,24 +176,20 @@ while True:
             scores[subject] = float(input(f"请输入{subject}成绩："))
         students[name] = scores
         print(f"学生{name}添加成功")
-	
-    #========2、删除学生========="
+
     elif choice == "2":
         name = input("请输入要删除学生的姓名：")
-        
         if name in students:
             del students[name]
             print(f"学生{name}删除成功")
         else:
             print("未找到该学生")
 
-   #========2、修改成绩========="
     elif choice == "3":
         name = input("请输入要修改成绩学生的姓名：")
         if name not in students:
             print("该学生不存在")
             continue
-        
         print(f"学生{name}的成绩如下：")
         print(students[name])
         subject = input("请输入要修改的科目名：")
@@ -226,16 +198,14 @@ while True:
             continue
         students[name][subject] = float(input(f"请输入{subject}的新分数："))
         print("修改成功")
-	
-    #========4、查看所有学生========="
+
     elif choice == "4":
         if not students:
             print("暂无学生数据")
             continue
         for name, scores in students.items():
             print(f"{name}: {scores}")
-	
-    #========5、统计（平均分/最高分/最低分）=========
+
     elif choice == "5":
         if not students:
             print("暂无学生数据")
@@ -259,7 +229,7 @@ while True:
         for name, scores in students.items():
             stu_avg = sum(scores.values()) / len(scores)
             print(f"学生{name}: 平均分{stu_avg:.2f}")
-	#退出
+
     elif choice == "0":
         print("感谢使用，再见！")
         break
@@ -285,8 +255,8 @@ while True:
 
 ## 扩展思考
 
-1. **保存到文件**：可以用 JSON 将数据保存到本地文件，程序重启后数据不丢失
+1. **保存到文件**：用 JSON 将数据保存到本地，程序重启后数据不丢失
 2. **异常处理**：输入非数字成绩会崩溃，可以用 `try-except` 捕获
-3. **添加多个科目**：允许用户自定义科目，而不是固定语文数学英语
+3. **自定义科目**：允许用户自定义科目，而不是固定语文数学英语
 4. **函数化**：把每个功能封装成函数，主循环只负责调用
-5. **图形界面**：学会 Tkinter 后可以给这个程序套个窗口
+5. **图形界面**：学会 Tkinter 后可以加个 GUI
