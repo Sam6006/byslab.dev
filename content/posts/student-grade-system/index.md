@@ -147,11 +147,13 @@ for name, scores in students.items():
 ```python
 #学生成绩管理系统
 
+# 学生数据：{姓名: {科目: 成绩, ...}, ...}
 students = {
     "张三": {"语文": 90, "数学": 86},
     "李四": {"语文": 90, "数学": 86}
 }
 
+#定义科目列表(添加学生时会用到，可按需修改)
 SUBJECTS = ["语文", "数学", "英语"]
 
 print("========学生成绩管理系统=========")
@@ -166,6 +168,7 @@ while True:
 
     choice = input("请选择操作（输入数字：）").strip()
 
+    #-----------1、添加学生--------------------
     if choice == "1":
         name = input("请输入学生姓名：")
         if name in students:
@@ -177,6 +180,7 @@ while True:
         students[name] = scores
         print(f"学生{name}添加成功")
 
+    #----------------2、删除学生--------------------
     elif choice == "2":
         name = input("请输入要删除学生的姓名：")
         if name in students:
@@ -185,6 +189,7 @@ while True:
         else:
             print("未找到该学生")
 
+    #----------------3、修改成绩--------------------
     elif choice == "3":
         name = input("请输入要修改成绩学生的姓名：")
         if name not in students:
@@ -199,6 +204,7 @@ while True:
         students[name][subject] = float(input(f"请输入{subject}的新分数："))
         print("修改成功")
 
+    #----------------4、查看所有学生----------------
     elif choice == "4":
         if not students:
             print("暂无学生数据")
@@ -206,6 +212,7 @@ while True:
         for name, scores in students.items():
             print(f"{name}: {scores}")
 
+    #----------5、统计（平均分/最高分/最低分）--------
     elif choice == "5":
         if not students:
             print("暂无学生数据")
@@ -230,9 +237,12 @@ while True:
             stu_avg = sum(scores.values()) / len(scores)
             print(f"学生{name}: 平均分{stu_avg:.2f}")
 
+    #----------------0、退出------------------------
     elif choice == "0":
         print("感谢使用，再见！")
         break
+
+    #----------无效输入
     else:
         print("无效输入，请输入数字0-5")
 ```
