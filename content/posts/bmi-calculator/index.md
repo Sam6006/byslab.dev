@@ -1,11 +1,14 @@
 ---
-title: "用 Python 实现 BMI 计算器"
+title: "Python入门：手写一个BMI计算器"
 date: 2026-07-08
 description: "数据类型、算术运算与流程控制实战——从零写一个 BMI 计算器"
 tags: ["Python", "入门", "实战"]
 ---
 
 ## 项目背景与需求分析
+
+> **本篇用到的知识点**：变量与赋值、数据类型（`int` `float` `str`）、类型转换（`float()`）、算术运算符（`**` `+` `-` `*` `/`）、格式化字符串（`f""`）、以及流程控制（`if-elif-else` / `match-case`）。
+
 
 BMI（Body Mass Index）是衡量人体胖瘦程度的常用指标，计算公式为：
 
