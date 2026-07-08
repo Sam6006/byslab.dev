@@ -28,6 +28,8 @@ fingerprintAlgorithm = "sha512"
   layoutBackgroundBlur = true
 
 [article]
+  showViews = true
+  showLikes = false
   showDate = true
   showDateUpdated = false
   showAuthor = false
@@ -52,3 +54,13 @@ fingerprintAlgorithm = "sha512"
   showSummary = true
   showTableOfContents = false
   showTaxonomies = true
+
+# Firebase (阅读统计)
+[firebase]
+  apiKey = "AIzaSyACZ1DF9g76lMhiSEKkGs2BVQfA-QlA740"
+  authDomain = "byslab-log.firebaseapp.com"
+  projectId = "byslab-log"
+  storageBucket = "byslab-log.firebasestorage.app"
+  messagingSenderId = "127774753709"
+  appId = "1:127774753709:web:3293ecb7d4c5f1d4dd9724"
+  measurementId = "G-YTE1P6B13G"
