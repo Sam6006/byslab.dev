@@ -1,5 +1,5 @@
 theme = "blowfish"
-baseURL = "https://byslab.dev/"
+baseURL = "https://www.byslab.dev/"
 defaultContentLanguage = "zh-cn"
 enableRobotsTXT = true
 summaryLength = 30
