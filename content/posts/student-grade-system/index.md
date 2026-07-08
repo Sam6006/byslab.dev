@@ -89,6 +89,8 @@ if choice == "1":
 
 > 注意：这里用 `SUBJECTS = ["语文", "数学", "英语"]` 作为全局科目列表，方便后续修改。
 
+![添加学生运行结果](image-20260708162509722.png)
+
 ### 删除学生
 
 ```python
@@ -100,6 +102,8 @@ else:
 ```
 
 `del` 是 Python 内置的删除关键字，可以直接从字典中移除一个键值对。
+
+![删除学生运行结果](image-20260708162347858.png)
 
 ### 修改成绩
 
@@ -119,12 +123,16 @@ if subject not in students[name]:
 students[name][subject] = float(input(f"请输入{subject}的新分数："))
 ```
 
+![修改成绩运行结果](D:\byslab.dev\content\posts\student-grade-system\image-20260708161926068.png)
+
 ### 查看所有学生
 
 ```python
 for name, scores in students.items():
     print(f"{name}: {scores}")
 ```
+
+![查看所有学生运行结果](image-20260708162231909.png)
 
 ### 统计
 
@@ -155,6 +163,8 @@ for name, scores in students.items():
 
 ---
 
+![统计运行结果](image-20260708162150735.png)
+
 ## 完整代码
 
 ```python
@@ -178,7 +188,8 @@ while True:
     print("0.退出")
 
     choice = input("请选择操作（输入数字：）").strip()
-
+	
+    #========1、添加学生========="
     if choice == "1":
         name = input("请输入学生姓名：")
         if name in students:
@@ -189,20 +200,24 @@ while True:
             scores[subject] = float(input(f"请输入{subject}成绩："))
         students[name] = scores
         print(f"学生{name}添加成功")
-
+	
+    #========2、删除学生========="
     elif choice == "2":
         name = input("请输入要删除学生的姓名：")
+        
         if name in students:
             del students[name]
             print(f"学生{name}删除成功")
         else:
             print("未找到该学生")
 
+   #========2、修改成绩========="
     elif choice == "3":
         name = input("请输入要修改成绩学生的姓名：")
         if name not in students:
             print("该学生不存在")
             continue
+        
         print(f"学生{name}的成绩如下：")
         print(students[name])
         subject = input("请输入要修改的科目名：")
@@ -211,14 +226,16 @@ while True:
             continue
         students[name][subject] = float(input(f"请输入{subject}的新分数："))
         print("修改成功")
-
+	
+    #========4、查看所有学生========="
     elif choice == "4":
         if not students:
             print("暂无学生数据")
             continue
         for name, scores in students.items():
             print(f"{name}: {scores}")
-
+	
+    #========5、统计（平均分/最高分/最低分）=========
     elif choice == "5":
         if not students:
             print("暂无学生数据")
@@ -242,19 +259,13 @@ while True:
         for name, scores in students.items():
             stu_avg = sum(scores.values()) / len(scores)
             print(f"学生{name}: 平均分{stu_avg:.2f}")
-
+	#退出
     elif choice == "0":
         print("感谢使用，再见！")
         break
     else:
         print("无效输入，请输入数字0-5")
 ```
-
----
-
-## 运行测试
-
-![学生成绩管理系统运行效果](terminal.png)
 
 ---
 
